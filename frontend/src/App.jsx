@@ -8,7 +8,7 @@ import './App.css'
 
 function Logout() {
   localStorage.clear()
-  return <Navigate to={'/login'} />
+  return <Navigate to="/login" />
 }
 
 function RegisterAndLogout() {
