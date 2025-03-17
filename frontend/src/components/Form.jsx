@@ -2,6 +2,7 @@ import {useState} from 'react'
 import api from '../api'
 import {useNavigate} from 'react-router-dom'
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants'
+import LoadingIndicator from './LoadingIndicator'
 
 function Form({route, method}) {
     const [username, setUsername] = useState('')
@@ -48,7 +49,7 @@ function Form({route, method}) {
             placeholder="Password"
         />
         <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">{name}</button>
-        {loading && <p className='mt-4 text-blue-500'>Loading...</p>}
+        {loading && <LoadingIndicator/>}
     </form>
 }
 
