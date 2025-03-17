@@ -48,8 +48,8 @@ function Form({route, method}) {
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
         />
-        <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-700">{name}</button>
         {loading && <LoadingIndicator/>}
+        <button type="submit" className="w-full p-2 mt-2 bg-blue-500 text-white rounded hover:bg-blue-700">{name}</button>
     </form>
 }
 
