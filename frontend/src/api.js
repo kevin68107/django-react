@@ -1,8 +1,10 @@
 import axios from 'axios';
 import { ACCESS_TOKEN } from './constants';
 
+const apiUrl = "https://c51f5191-5861-4dc1-954c-07c67b5032b5-dev.e1-us-east-azure.choreoapis.dev/djangodeploy/backend/v1"
+
 const api = axios.create({
-    baseURL: import.meta.env.VITE_API_URL,
+    baseURL: import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL : apiUrl,
 })
 
 api.interceptors.request.use(
